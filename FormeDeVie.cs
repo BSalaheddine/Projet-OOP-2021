@@ -9,12 +9,12 @@ namespace Projet_OOP_2021
     public class FormeDeVie : Entité
     {
         private int PointsDeVie;
-        private int PointsNrj;
-        public FormeDeVie(int PointsDeVie, int PointsNrj, (float, float) coord) :
+        private int ReserveEnergie;
+        public FormeDeVie(int PointsDeVie, int ReserveEnergie, (float, float) coord) :
             base(coord)
         {
             this.PointsDeVie = PointsDeVie;
-            this.PointsNrj = PointsNrj;
+            this.ReserveEnergie = ReserveEnergie;
         }
     }
 }
