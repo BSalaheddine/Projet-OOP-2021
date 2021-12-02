@@ -6,7 +6,8 @@ namespace Projet_OOP_2021
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            (int, int) t = (1, 3);
+            Console.WriteLine(t.Item1);
         }
     }
 }
