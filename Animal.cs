@@ -8,9 +8,25 @@ namespace Projet_OOP_2021
 {
     public class Animal : FormeDeVie
     {
-        public Animal(int PointsDeVie, int ReserveEnergie, float x, float y) :
-            base(PointsDeVie, ReserveEnergie, x, y)
+        private bool Sexe;
+        private float ZoneDeVision;
+        public Animal(int PointsDeVie, int ReserveEnergie, float x, float y, float ZoneDeContact, bool Sexe, float ZoneDeVision) :
+            base(PointsDeVie, ReserveEnergie, x, y, ZoneDeContact)
         { 
+            this.Sexe = Sexe;
+            this.ZoneDeVision = ZoneDeVision;
+        }
+        public void Defequer()
+        {
+            
+        }
+        public void Attaquer()
+        {
+
+        }
+        public void SeDeplacer()
+        {
+
         }
     }
 }

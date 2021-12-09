@@ -10,11 +10,19 @@ namespace Projet_OOP_2021
     {
         private float x;
         private float y;
+        private float ZoneDeContact;
 
-        public Entité(float x, float y)
+        public Entité(float x, float y, float ZoneDeContact)
         {
             this.x = x;
             this.y = y;
+            this.ZoneDeContact = ZoneDeContact;
+        }
+        public (float, float) Position()
+        {
+            (float, float) a = (1, 5);
+            a.Item1 = 2;
+            return a;
         }
     }
 }

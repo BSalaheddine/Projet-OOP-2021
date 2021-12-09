@@ -10,11 +10,23 @@ namespace Projet_OOP_2021
     {
         private int PointsDeVie;
         private int ReserveEnergie;
-        public FormeDeVie(int PointsDeVie, int ReserveEnergie, float x, float y):
-            base(x, y)
+        public FormeDeVie(int PointsDeVie, int ReserveEnergie, float x, float y, float ZoneDeContact) :
+            base(x, y, ZoneDeContact)
         {
             this.PointsDeVie = PointsDeVie;
             this.ReserveEnergie = ReserveEnergie;
+        }
+        public void SeNourrir()
+        {
+
+        }
+        public void SeReproduire()
+        {
+
+        }
+        public void Mourir()
+        {
+
         }
     }
 }

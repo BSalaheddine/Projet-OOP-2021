@@ -8,8 +8,8 @@ namespace Projet_OOP_2021
 {
     public class Herbivore : Animal
     {
-        public Herbivore(int PointsDeVie, int ReserveEnergie, float x, float y) :
-            base(PointsDeVie, ReserveEnergie, x, y)
+        public Herbivore(int PointsDeVie, int ReserveEnergie, float x, float y, float ZoneDeContact, bool Sexe, float ZoneDeVision) :
+            base(PointsDeVie, ReserveEnergie, x, y, ZoneDeContact, Sexe, ZoneDeVision)
         {
 
         }
