@@ -8,8 +8,8 @@ namespace Projet_OOP_2021
 {
     public class Animal : FormeDeVie
     {
-        public Animal(int PointsDeVie, int ReserveEnergie, (float, float) coord) :
-            base(PointsDeVie, ReserveEnergie, coord)
+        public Animal(int PointsDeVie, int ReserveEnergie, float x, float y) :
+            base(PointsDeVie, ReserveEnergie, x, y)
         { 
         }
     }

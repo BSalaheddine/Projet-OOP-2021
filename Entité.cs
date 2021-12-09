@@ -8,11 +8,13 @@ namespace Projet_OOP_2021
 {
      public class Entité
     {
-        private (float, float) coord;
+        private float x;
+        private float y;
 
-        public Entité((float, float) coord)
+        public Entité(float x, float y)
         {
-            this.coord = coord;
+            this.x = x;
+            this.y = y;
         }
     }
 }

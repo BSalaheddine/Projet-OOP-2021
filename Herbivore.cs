@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Projet_OOP_2021
 {
-    class Herbivore : Animal
+    public class Herbivore : Animal
     {
+        public Herbivore(int PointsDeVie, int ReserveEnergie, float x, float y) :
+            base(PointsDeVie, ReserveEnergie, x, y)
+        {
+
+        }
     }
 }
