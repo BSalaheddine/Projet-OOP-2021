@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Projet_OOP_2021
 {
@@ -6,8 +7,8 @@ namespace Projet_OOP_2021
     {
         static void Main(string[] args)
         {
-            (int, int) t = (1, 3);
-            Console.WriteLine(t.Item1);
+            Jeu Game = new Jeu();
+            Game.startGame();
         }
     }
 }

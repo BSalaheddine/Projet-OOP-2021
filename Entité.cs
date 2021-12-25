@@ -12,7 +12,7 @@ namespace Projet_OOP_2021
         private float y;
         private float ZoneDeContact;
 
-        public Entité(float x, float y, float ZoneDeContact)
+        public Entité(float x, float y, float ZoneDeContact = (float) 10.0)
         {
             this.x = x;
             this.y = y;
