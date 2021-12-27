@@ -6,27 +6,23 @@ using System.Threading.Tasks;
 
 namespace Projet_OOP_2021
 {
-    public class Animal : FormeDeVie
+    public abstract class Animal : FormeDeVie
     {
-        private bool Sexe;
-        private float ZoneDeVision;
-        public Animal(int PointsDeVie, int ReserveEnergie, float x, float y, float ZoneDeContact, bool Sexe, float ZoneDeVision) :
-            base(PointsDeVie, ReserveEnergie, x, y, ZoneDeContact)
+        private bool Genre;
+        private float ZoneDeVision = 20;
+        public Animal(float x, float y, bool Genre) :
+            base(x, y)
         { 
-            this.Sexe = Sexe;
-            this.ZoneDeVision = ZoneDeVision;
+            this.Genre = Genre;
         }
-        public void Defequer()
+        public bool getGenre() { return Genre; }
+        public int Defequer()
         {
-            
+            return 2;
         }
-        public void Attaquer()
+        public int SeDeplacer()
         {
-
-        }
-        public void SeDeplacer()
-        {
-
+            return 1; 
         }
     }
 }

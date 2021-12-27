@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Projet_OOP_2021
 {
-    class Nourriture : Entité
+    public class Nourriture : Entité
     {
         private int Fraicheur;
-        public Nourriture(float x, float y, float ZoneDeContact, int Fraicheur) :
-            base(x, y, ZoneDeContact)
+        public Nourriture(float x, float y, int Fraicheur) :
+            base(x, y)
         {
             this.Fraicheur = Fraicheur;
         }
-        public bool ViandeOuDechetOrganique()
+        /*public bool ViandeOuDechetOrganique()
         {
             if (Fraicheur >= 0)
             {
@@ -24,6 +24,11 @@ namespace Projet_OOP_2021
             {
                 return false;
             }
+        }*/
+        public override int Interaction(Entité victime)
+        {
+            return 0;
         }
+        public int getFraicheur() { return Fraicheur; }
     }
 }

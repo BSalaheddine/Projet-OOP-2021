@@ -6,23 +6,22 @@ using System.Threading.Tasks;
 
 namespace Projet_OOP_2021
 {
-     public class Entité
+     public abstract class Entité
     {
         private float x;
         private float y;
-        private float ZoneDeContact;
+        private float ZoneDeContact = 10;
 
-        public Entité(float x, float y, float ZoneDeContact = (float) 10.0)
+
+        public Entité(float x, float y)
         {
             this.x = x;
             this.y = y;
-            this.ZoneDeContact = ZoneDeContact;
         }
-        public (float, float) Position()
-        {
-            (float, float) a = (1, 5);
-            a.Item1 = 2;
-            return a;
-        }
+        public float getX() { return x; }
+        public float getY() { return y; }
+        public float getZ() { return ZoneDeContact; }
+        public abstract int Interaction(Entité victime);
+        //public abstract int Actualisation(Entité entity);
     }
 }
