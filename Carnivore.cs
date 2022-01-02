@@ -15,6 +15,7 @@ namespace Projet_OOP_2021
         }
         public int Attaquer(Animal victime)
         {
+            Console.WriteLine(this + "a attaqué");
             return -10;
         }
         public override int SeNourrir(Entité victime)
@@ -22,6 +23,7 @@ namespace Projet_OOP_2021
             Nourriture v = (Nourriture)victime;
             if (v.getFraicheur() >= 0)
             {
+                Console.WriteLine(this + "s\'est nourrit");
                 return 1;
             }
             else
@@ -32,10 +34,12 @@ namespace Projet_OOP_2021
         }
         public override int Mourir()
         {
+            Console.WriteLine(this + "est mort");
             return 1;
         }
         public override int SeReproduire()
         {
+            Console.WriteLine(this + "s\'est reproduit");
             return 2;
         }
         public override int Interaction(Entité victime)
@@ -78,7 +82,7 @@ namespace Projet_OOP_2021
         }
         public override string ToString()
         {
-            return string.Format("({0}, {1})", getX(), getY());
+            return string.Format("En ({0}, {1}), le Carnivore {2} ",this.getX() ,this.getY() ,this.GetHashCode());
         }
     }
 }

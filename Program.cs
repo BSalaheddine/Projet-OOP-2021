@@ -8,13 +8,11 @@ namespace Projet_OOP_2021
     {
         static void Main(string[] args)
         {
-            Jeu Game = new Jeu();
-            Game.startGame();
-            foreach(Object i in Game.getGame())
+            while (true)
             {
-                //Console.WriteLine((List<Carnivore>)i);
+                Jeu Game = new Jeu();
+                Game.startGame();
             }
-            
         }
     }
 }

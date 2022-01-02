@@ -15,8 +15,11 @@ namespace Projet_OOP_2021
         {
 
         }
+        public float getZoneDeSemis() { return ZoneDeSemis; }
+        public float getZoneDeRacine() { return ZoneDeRacine; }
         public override int Mourir()
         {
+            Console.WriteLine(this + "est morte");
             return 1;
         }
         public override int Interaction(Entité victime)
@@ -25,11 +28,21 @@ namespace Projet_OOP_2021
         }
         public override int SeReproduire()
         {
+            Console.WriteLine(this + "s\'est reproduit");
             return 4;
         }
         public override int SeNourrir(Entité victime)
         {
+            Console.WriteLine(this + "s\'est nourrit");
             return 1;
+        }
+        public override void SeDeplacer(float x, float y)
+        {
+
+        }
+        public override string ToString()
+        {
+            return string.Format("En ({0}, {1}), la Plante {2} ", this.getX(), this.getY(), this.GetHashCode());
         }
     }
 }

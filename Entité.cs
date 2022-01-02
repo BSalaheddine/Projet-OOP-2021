@@ -20,8 +20,13 @@ namespace Projet_OOP_2021
         }
         public float getX() { return x; }
         public float getY() { return y; }
-        public float getZ() { return ZoneDeContact; }
+        public float getZoneDeContact() { return ZoneDeContact; }
         public abstract int Interaction(Entité victime);
+        public virtual void SeDeplacer(float x, float y)
+        {
+            this.x += x;
+            this.y += y;
+        }
         //public abstract int Actualisation(Entité entity);
     }
 }

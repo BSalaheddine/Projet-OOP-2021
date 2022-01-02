@@ -14,21 +14,15 @@ namespace Projet_OOP_2021
         {
             this.Fraicheur = Fraicheur;
         }
-        /*public bool ViandeOuDechetOrganique()
-        {
-            if (Fraicheur >= 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }*/
+        public int getFraicheur() { return Fraicheur; }
         public override int Interaction(Entité victime)
         {
             return 0;
         }
-        public int getFraicheur() { return Fraicheur; }
+        public override void SeDeplacer(float x, float y)
+        {
+
+        }
+
     }
 }

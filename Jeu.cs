@@ -9,16 +9,8 @@ namespace Projet_OOP_2021
     class Jeu
     {
         private List<Entité> game = new List<Entité>();
-        /*private List<Carnivore> carniList = new List<Carnivore>();
-        private List<Herbivore> herbiList = new List<Herbivore>();
-        private List<Nourriture> nourriList = new List<Nourriture>();
-        private List<Plante> planteList = new List<Plante>();*/
         public Jeu(int carni = 5, int herbi = 5, int nouri = 5, int plante = 5)
         {
-            /*game.Add(carniList);
-            game.Add(herbiList);
-            game.Add(nourriList);
-            game.Add(planteList);*/
             var rand = new Random();
             for(int i = 0; i < carni; i++)
             {
@@ -46,15 +38,17 @@ namespace Projet_OOP_2021
                 for(int j = game.IndexOf(i); j < game.Count(); j++)
                 {
                     float distance = (float)Math.Sqrt((Math.Pow(i.getX() - game[j].getX(), 2) + Math.Pow(i.getY() - game[j].getY(), 2)));
-                    if (distance < (float)(i.getZ() + game[j].getZ()))
+                    if (distance <= (float)(i.getZoneDeContact() + game[j].getZoneDeContact()))
                     {
                         if (i.Interaction(game[j]) == 1)
                         {
+                            FormeDeVie g = (FormeDeVie)game[j];
+                            g.Guerison();
                             game.Remove(game[j]);
                         }
                         else if (i.Interaction(game[j]) == 2)
                         {
-                            game.Add(new Carnivore((float) game[j].getX(), (float)game[j].getY(), now.Second > 30));
+                            game.Add(new Carnivore((float)game[j].getX(), (float)game[j].getY(), now.Second > 30));
                         }
                         else if (i.Interaction(game[j]) == -10)
                         {
@@ -71,6 +65,48 @@ namespace Projet_OOP_2021
                         }
 
                     }
+                }
+            }
+            foreach(Entité i in game)
+            {
+                try
+                {
+                    Animal ii = (Animal)i;
+                    for (int j = game.IndexOf(i); j < game.Count(); j++)
+                    {
+                        float distance = (float)Math.Sqrt((Math.Pow(i.getX() - game[j].getX(), 2) + Math.Pow(i.getY() - game[j].getY(), 2)));
+                        float m = (game[j].getY() - i.getY())/ (game[j].getX() - i.getX());
+                        float a = (float)Math.Sqrt(1/(Math.Pow(m, 2) + 1));
+                        if (distance <= ii.getZoneDeVision())
+                        {
+                            ii.SeDeplacer(a ,a*m);
+                        }
+                    }
+                }
+                catch
+                {
+                }
+                try
+                {
+                    Plante ii = (Plante)i;
+                    for (int j = game.IndexOf(i); j < game.Count(); j++)
+                    {
+                        try
+                        {
+                            Nourriture n = (Nourriture)game[j];
+                            float distance = (float)Math.Sqrt((Math.Pow(i.getX() - game[j].getX(), 2) + Math.Pow(i.getY() - game[j].getY(), 2)));
+                            if (distance <= ii.getZoneDeRacine())
+                            {
+                                game.Remove(game[j]);
+                            }
+                        }
+                        catch
+                        {
+                        }
+                    }
+                }
+                catch
+                {
                 }
             }
         }

@@ -23,10 +23,16 @@ namespace Projet_OOP_2021
         public void Degats()
         {
             PointsDeVie -= 10;
+            Console.WriteLine(this + "a reçu des dégats");
         }
-        public void guerison()
+        public void Guerison()
         {
-            PointsDeVie += 10;
+            ReserveEnergie += 10;
+            Console.WriteLine(this + "a gagné des points d'énergie");
+        }
+        public override string ToString()
+        {
+            return string.Format("En ({0}, {1}), la Forme de vie {2} ", this.getX(), this.getY(), this.GetHashCode());
         }
     }
 }

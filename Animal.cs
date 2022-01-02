@@ -16,13 +16,15 @@ namespace Projet_OOP_2021
             this.Genre = Genre;
         }
         public bool getGenre() { return Genre; }
+        public float getZoneDeVision() { return ZoneDeVision; }
         public int Defequer()
         {
+            Console.WriteLine(this + "a defequé");
             return 2;
         }
-        public int SeDeplacer()
+        public override string ToString()
         {
-            return 1; 
+            return string.Format("En ({0}, {1}), l'Animal {2} ", this.getX(), this.getY(), this.GetHashCode());
         }
     }
 }

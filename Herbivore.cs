@@ -38,15 +38,22 @@ namespace Projet_OOP_2021
         }
         public override int SeNourrir(Entité victime)
         {
+            Console.WriteLine(this + "s\'est nourrit");
             return 1;
         }
         public override int SeReproduire()
         {
+            Console.WriteLine(this + "s\'est reproduit");
             return 3;
         }
         public override int Mourir()
         {
+            Console.WriteLine(this + "est mort");
             return 1;
+        }
+        public override string ToString()
+        {
+            return string.Format("En ({0}, {1}), l'Herbivore {2}", this.getX(), this.getY(), this.GetHashCode());
         }
     }
 }
