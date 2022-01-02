@@ -23,6 +23,11 @@ namespace Projet_OOP_2021
         {
 
         }
+        public override int Actualisation()
+        {
+            Fraicheur--;
+            return 0;
+        }
 
     }
 }

@@ -18,7 +18,7 @@ namespace Projet_OOP_2021
             try
             {
                 Plante v1 = (Plante)victime;
-                SeNourrir(v1);
+                return SeNourrir (v1);
             }
             catch
             {
@@ -28,7 +28,7 @@ namespace Projet_OOP_2021
                 Herbivore v = (Herbivore)victime;
                 if (v.getGenre() == false)
                 {
-                    SeReproduire();
+                    return SeReproduire ();
                 }
             }
             catch
@@ -38,7 +38,7 @@ namespace Projet_OOP_2021
         }
         public override int SeNourrir(Entité victime)
         {
-            Console.WriteLine(this + "s\'est nourrit");
+            Console.WriteLine(this + "s\'est nourri");
             return 1;
         }
         public override int SeReproduire()
@@ -53,7 +53,7 @@ namespace Projet_OOP_2021
         }
         public override string ToString()
         {
-            return string.Format("En ({0}, {1}), l'Herbivore {2}", this.getX(), this.getY(), this.GetHashCode());
+            return string.Format("En ({0}, {1}), l'Herbivore {2} ", this.getX(), this.getY(), this.GetHashCode());
         }
     }
 }

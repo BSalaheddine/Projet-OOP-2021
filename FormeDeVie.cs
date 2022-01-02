@@ -34,5 +34,11 @@ namespace Projet_OOP_2021
         {
             return string.Format("En ({0}, {1}), la Forme de vie {2} ", this.getX(), this.getY(), this.GetHashCode());
         }
+        public override int Actualisation()
+        {
+            PointsDeVie++;
+            ReserveEnergie--;
+            return 0;
+        }
     }
 }

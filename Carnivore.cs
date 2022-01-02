@@ -23,7 +23,7 @@ namespace Projet_OOP_2021
             Nourriture v = (Nourriture)victime;
             if (v.getFraicheur() >= 0)
             {
-                Console.WriteLine(this + "s\'est nourrit");
+                Console.WriteLine(this + "s\'est nourri");
                 return 1;
             }
             else
@@ -47,7 +47,7 @@ namespace Projet_OOP_2021
             try
             {
                 Nourriture v1 = (Nourriture)victime;
-                SeNourrir(v1);
+                return SeNourrir(v1);
             }
             catch
             {
@@ -57,11 +57,11 @@ namespace Projet_OOP_2021
                 Carnivore v2 = (Carnivore)victime;
                 if(v2.getGenre() == false)
                 {
-                    SeReproduire();
+                    return SeReproduire();
                 }
                 else if (v2.getGenre() == true)
                 {
-                    Attaquer(v2);
+                    return Attaquer(v2);
                 }
             }
             catch
@@ -72,7 +72,7 @@ namespace Projet_OOP_2021
                 Animal v3 = (Animal)victime;
                 if (v3.getGenre() == true )
                 {
-                    SeReproduire();
+                    return SeReproduire ();
                 }
             }
             catch

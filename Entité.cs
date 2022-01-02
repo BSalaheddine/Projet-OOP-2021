@@ -27,6 +27,6 @@ namespace Projet_OOP_2021
             this.x += x;
             this.y += y;
         }
-        //public abstract int Actualisation(Entité entity);
+        public abstract int Actualisation();
     }
 }

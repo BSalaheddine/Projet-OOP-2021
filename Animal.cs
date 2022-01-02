@@ -26,5 +26,9 @@ namespace Projet_OOP_2021
         {
             return string.Format("En ({0}, {1}), l'Animal {2} ", this.getX(), this.getY(), this.GetHashCode());
         }
+        public override int Actualisation()
+        {
+            return Defequer();
+        }
     }
 }

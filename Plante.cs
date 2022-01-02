@@ -28,12 +28,12 @@ namespace Projet_OOP_2021
         }
         public override int SeReproduire()
         {
-            Console.WriteLine(this + "s\'est reproduit");
+            Console.WriteLine(this + "s\'est reproduite");
             return 4;
         }
         public override int SeNourrir(Entité victime)
         {
-            Console.WriteLine(this + "s\'est nourrit");
+            Console.WriteLine(this + "s\'est nourrie");
             return 1;
         }
         public override void SeDeplacer(float x, float y)
@@ -43,6 +43,10 @@ namespace Projet_OOP_2021
         public override string ToString()
         {
             return string.Format("En ({0}, {1}), la Plante {2} ", this.getX(), this.getY(), this.GetHashCode());
+        }
+        public override int Actualisation()
+        {
+            return 1;
         }
     }
 }
