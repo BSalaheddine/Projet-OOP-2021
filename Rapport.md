@@ -22,8 +22,9 @@ De plus, les **Herbivores** se nourrissent de **Plantes**, touts cette alimentat
 Pour la reproduction, les **Aminaux** se reproduisent grâce à la méthodes **SeReproduire()** lorsqu'il a contact entre deux **Animaux** de genre opposé, les **Plantes** elles font apparaitre d'autre **Plantes** autour d'elles (dans la **ZoneDeSemis**). Les **Carnivore** se reproduise uniquement avec des **Carnivores** et les **Herbivores** uniquement avec des **Herbivores**.
 
 ## Diagramme UML
-
+### Diagramme de classe
 ![Diagramme de classe](ClassDiagram.png)
+### Diagramme de séquence
 ![Diagramme de séquence](SequenceDiagram.png)
 
 ## Principes SOLID
